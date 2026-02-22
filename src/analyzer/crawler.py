@@ -369,7 +369,7 @@ class IAMCrawler:
             resource = values.get("resource", "*")
 
             records.append(UsageRecord(
-                event_source=values.get("eventSource", ""),
+                event_source=service,
                 event_name=action,
                 resources=[resource] if resource != "unknown" else [],
                 count=int(values.get("call_count", 0)),

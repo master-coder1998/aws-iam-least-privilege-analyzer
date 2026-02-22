@@ -100,7 +100,7 @@ def handler(event: dict, context: Any) -> dict:
 
         run_summary["accounts_analyzed"] += 1
         aa_findings = crawler.get_access_analyzer_findings(account_id)
-        aa_by_role = {f.role_arn: f for f in aa_findings}
+        _aa_by_role = {f.role_arn: f for f in aa_findings}
 
         for role in roles:
             try:
