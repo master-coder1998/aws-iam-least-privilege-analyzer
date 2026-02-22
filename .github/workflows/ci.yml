@@ -1,0 +1,193 @@
+name: CI — Test, Lint, and Security Scan
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  security-events: write  # Required for uploading SARIF results to GitHub Security
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────
+  # Unit Tests
+  # ─────────────────────────────────────────────────────────────────
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run unit tests with coverage
+        run: |
+          pytest tests/unit/ \
+            --cov=src \
+            --cov-report=term-missing \
+            --cov-report=xml:coverage.xml \
+            --cov-fail-under=80 \
+            -v \
+            --tb=short
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          file: coverage.xml
+          fail_ci_if_error: false
+
+  # ─────────────────────────────────────────────────────────────────
+  # Static Analysis
+  # ─────────────────────────────────────────────────────────────────
+  lint:
+    name: Lint and Static Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install linting tools
+        run: pip install ruff mypy boto3-stubs
+
+      - name: Ruff lint
+        run: ruff check src/ tests/
+
+      - name: Ruff format check
+        run: ruff format --check src/ tests/
+
+      - name: Type check with mypy
+        run: mypy src/ --ignore-missing-imports --strict
+
+  # ─────────────────────────────────────────────────────────────────
+  # Security Scanning
+  # A security tool repo MUST pass its own security gate.
+  # This is non-negotiable and demonstrates ownership.
+  # ─────────────────────────────────────────────────────────────────
+  security-scan:
+    name: Security Scanning
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install security tools
+        run: pip install bandit safety gitleaks
+
+      # Secret scanning — must run before anything else
+      - name: Scan for hardcoded secrets (Gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Python SAST
+      - name: Bandit SAST scan
+        run: |
+          bandit -r src/ \
+            -f sarif \
+            -o bandit-results.sarif \
+            --severity-level medium \
+            --confidence-level medium
+        continue-on-error: true
+
+      - name: Upload Bandit SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: bandit-results.sarif
+          category: bandit
+
+      # Dependency vulnerability scanning
+      - name: Safety — check dependencies for CVEs
+        run: |
+          safety check \
+            --full-report \
+            --output json \
+            --save-json safety-results.json
+        continue-on-error: true
+
+      - name: Fail if CRITICAL dependency CVEs found
+        run: |
+          python -c "
+          import json, sys
+          with open('safety-results.json') as f:
+              data = json.load(f)
+          critical = [v for v in data.get('vulnerabilities', [])
+                      if v.get('severity', '').upper() == 'CRITICAL']
+          if critical:
+              print(f'FAIL: {len(critical)} CRITICAL dependency CVEs found')
+              for v in critical:
+                  print(f'  {v[\"package_name\"]} {v[\"analyzed_version\"]}: {v[\"vulnerability_id\"]}')
+              sys.exit(1)
+          print(f'OK: No CRITICAL CVEs found')
+          "
+
+  # ─────────────────────────────────────────────────────────────────
+  # Terraform Validation
+  # ─────────────────────────────────────────────────────────────────
+  terraform-validate:
+    name: Terraform Validate and Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "~1.5"
+
+      - name: Terraform format check
+        run: terraform fmt -check -recursive terraform/
+
+      - name: Terraform validate (prod)
+        working-directory: terraform/environments/prod
+        run: |
+          terraform init -backend=false
+          terraform validate
+
+      - name: Install Checkov
+        run: pip install checkov
+
+      - name: Checkov IaC security scan
+        run: |
+          checkov -d terraform/ \
+            --framework terraform \
+            --output sarif \
+            --output-file checkov-results.sarif \
+            --soft-fail \
+            --compact
+        continue-on-error: true
+
+      - name: Upload Checkov SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: checkov-results.sarif
+          category: checkov
+
+      - name: Fail on HIGH/CRITICAL Checkov findings
+        run: |
+          checkov -d terraform/ \
+            --framework terraform \
+            --check HIGH,CRITICAL \
+            --compact
