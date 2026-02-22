@@ -32,10 +32,10 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project     = "IAMLeastPrivilegeAnalyzer"
-      ManagedBy   = "Terraform"
+      Project      = "IAMLeastPrivilegeAnalyzer"
+      ManagedBy    = "Terraform"
       SecurityTool = "true"
-      Owner       = "SecurityTeam"
+      Owner        = "SecurityTeam"
     }
   }
 }
@@ -66,22 +66,22 @@ resource "aws_lambda_function" "iam_analyzer" {
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
   handler          = "lambda_handler.handler"
   runtime          = "python3.12"
-  timeout          = 900  # 15 minutes — org-wide crawl can take time
+  timeout          = 900 # 15 minutes — org-wide crawl can take time
   memory_size      = 1024
 
   role = aws_iam_role.lambda_execution.arn
 
   environment {
     variables = {
-      ORG_ACCOUNT_ID                 = var.org_account_id
-      CLOUDTRAIL_LAKE_DATA_STORE_ID  = var.cloudtrail_lake_data_store_id
-      DYNAMODB_TABLE                 = aws_dynamodb_table.findings.name
-      S3_REMEDIATION_BUCKET          = aws_s3_bucket.remediation.bucket
-      SNS_WEEKLY_DIGEST_TOPIC        = aws_sns_topic.weekly_digest.arn
-      SECURITY_ACCOUNT_ID            = data.aws_caller_identity.current.account_id
-      MIN_SEVERITY_FOR_SECHUB        = var.min_severity_for_sechub
-      AWS_DEFAULT_REGION             = var.aws_region
-      CROSS_ACCOUNT_EXTERNAL_ID      = var.cross_account_external_id
+      ORG_ACCOUNT_ID                = var.org_account_id
+      CLOUDTRAIL_LAKE_DATA_STORE_ID = var.cloudtrail_lake_data_store_id
+      DYNAMODB_TABLE                = aws_dynamodb_table.findings.name
+      S3_REMEDIATION_BUCKET         = aws_s3_bucket.remediation.bucket
+      SNS_WEEKLY_DIGEST_TOPIC       = aws_sns_topic.weekly_digest.arn
+      SECURITY_ACCOUNT_ID           = data.aws_caller_identity.current.account_id
+      MIN_SEVERITY_FOR_SECHUB       = var.min_severity_for_sechub
+      AWS_DEFAULT_REGION            = var.aws_region
+      CROSS_ACCOUNT_EXTERNAL_ID     = var.cross_account_external_id
     }
   }
 
@@ -91,15 +91,15 @@ resource "aws_lambda_function" "iam_analyzer" {
   }
 
   tracing_config {
-    mode = "Active"  # X-Ray tracing for performance visibility
+    mode = "Active" # X-Ray tracing for performance visibility
   }
 
-  reserved_concurrent_executions = 1  # Prevent parallel runs from duplicate findings
+  reserved_concurrent_executions = 1 # Prevent parallel runs from duplicate findings
 
   depends_on = [aws_cloudwatch_log_group.lambda_logs]
 
   lifecycle {
-    ignore_changes = [filename]  # Managed by CI/CD deployment
+    ignore_changes = [filename] # Managed by CI/CD deployment
   }
 }
 
@@ -117,11 +117,11 @@ resource "aws_scheduler_schedule" "daily_analysis" {
   name        = "iam-analyzer-daily"
   description = "Triggers IAM least privilege analysis daily at 02:00 UTC"
 
-  schedule_expression = "cron(0 2 * * ? *)"  # 02:00 UTC daily
+  schedule_expression = "cron(0 2 * * ? *)" # 02:00 UTC daily
 
   flexible_time_window {
     mode                      = "FLEXIBLE"
-    maximum_window_in_minutes = 30  # Allow 30-min window to avoid thundering herd
+    maximum_window_in_minutes = 30 # Allow 30-min window to avoid thundering herd
   }
 
   target {
@@ -135,7 +135,7 @@ resource "aws_scheduler_schedule" "daily_analysis" {
     })
 
     retry_policy {
-      maximum_attempts        = 2
+      maximum_attempts             = 2
       maximum_event_age_in_seconds = 3600
     }
   }
@@ -155,7 +155,7 @@ resource "aws_lambda_permission" "allow_scheduler" {
 
 resource "aws_dynamodb_table" "findings" {
   name         = "iam-analyzer-findings"
-  billing_mode = "PAY_PER_REQUEST"  # On-demand — usage is bursty (daily run)
+  billing_mode = "PAY_PER_REQUEST" # On-demand — usage is bursty (daily run)
   hash_key     = "pk"
   range_key    = "sk"
 
@@ -231,7 +231,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "remediation" {
       kms_master_key_id = aws_kms_key.analyzer.arn
       sse_algorithm     = "aws:kms"
     }
-    bucket_key_enabled = true  # Reduces KMS API calls and costs
+    bucket_key_enabled = true # Reduces KMS API calls and costs
   }
 }
 
@@ -251,7 +251,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "remediation" {
     status = "Enabled"
 
     expiration {
-      days = 365  # Keep 1 year of remediation history
+      days = 365 # Keep 1 year of remediation history
     }
 
     noncurrent_version_expiration {
@@ -272,7 +272,7 @@ resource "aws_s3_bucket_policy" "remediation" {
         Effect    = "Deny"
         Principal = "*"
         Action    = "s3:*"
-        Resource  = [
+        Resource = [
           aws_s3_bucket.remediation.arn,
           "${aws_s3_bucket.remediation.arn}/*",
         ]
@@ -281,10 +281,10 @@ resource "aws_s3_bucket_policy" "remediation" {
         }
       },
       {
-        Sid    = "DenyExternalAccess"
-        Effect = "Deny"
+        Sid       = "DenyExternalAccess"
+        Effect    = "Deny"
         Principal = "*"
-        Action = "s3:*"
+        Action    = "s3:*"
         Resource = [
           aws_s3_bucket.remediation.arn,
           "${aws_s3_bucket.remediation.arn}/*",
@@ -318,8 +318,8 @@ resource "aws_kms_alias" "analyzer" {
 
 data "aws_iam_policy_document" "kms_key_policy" {
   statement {
-    sid     = "EnableRootAccount"
-    effect  = "Allow"
+    sid    = "EnableRootAccount"
+    effect = "Allow"
     principals {
       type        = "AWS"
       identifiers = ["arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"]
@@ -386,7 +386,7 @@ resource "aws_sns_topic_subscription" "security_team_email" {
 
 resource "aws_sqs_queue" "lambda_dlq" {
   name                      = "iam-analyzer-dlq"
-  message_retention_seconds = 1209600  # 14 days
+  message_retention_seconds = 1209600 # 14 days
   kms_master_key_id         = aws_kms_key.analyzer.arn
 }
 
@@ -408,8 +408,8 @@ resource "aws_iam_role" "lambda_execution" {
 }
 
 resource "aws_iam_role_policy" "lambda_execution" {
-  name   = "iam-analyzer-lambda-permissions"
-  role   = aws_iam_role.lambda_execution.id
+  name = "iam-analyzer-lambda-permissions"
+  role = aws_iam_role.lambda_execution.id
 
   policy = jsonencode({
     Version = "2012-10-17"
@@ -485,15 +485,15 @@ resource "aws_iam_role_policy" "lambda_execution" {
         Resource = aws_cloudwatch_log_group.lambda_logs.arn
       },
       {
-        Sid    = "SNSDigest"
-        Effect = "Allow"
-        Action = "sns:Publish"
+        Sid      = "SNSDigest"
+        Effect   = "Allow"
+        Action   = "sns:Publish"
         Resource = aws_sns_topic.weekly_digest.arn
       },
       {
-        Sid    = "SQSDLQAccess"
-        Effect = "Allow"
-        Action = "sqs:SendMessage"
+        Sid      = "SQSDLQAccess"
+        Effect   = "Allow"
+        Action   = "sqs:SendMessage"
         Resource = aws_sqs_queue.lambda_dlq.arn
       },
       {

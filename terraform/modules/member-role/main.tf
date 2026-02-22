@@ -38,18 +38,18 @@ resource "aws_iam_role" "member_security_audit" {
     ]
   })
 
-  max_session_duration = 3600  # 1 hour max — sufficient for a full account crawl
+  max_session_duration = 3600 # 1 hour max — sufficient for a full account crawl
 
   tags = {
-    Purpose          = "SecurityAudit"
-    ManagedBy        = "StackSets"
-    AllowedCaller    = "IAMLeastPrivilegeAnalyzer"
+    Purpose       = "SecurityAudit"
+    ManagedBy     = "StackSets"
+    AllowedCaller = "IAMLeastPrivilegeAnalyzer"
   }
 }
 
 resource "aws_iam_role_policy" "member_security_audit" {
-  name   = "iam-analyzer-read-permissions"
-  role   = aws_iam_role.member_security_audit.id
+  name = "iam-analyzer-read-permissions"
+  role = aws_iam_role.member_security_audit.id
 
   # Scoped to exactly what the analyzer needs — no more.
   # ReadOnlyAccess managed policy is intentionally NOT used because it's
