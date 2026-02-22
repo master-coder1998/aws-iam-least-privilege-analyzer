@@ -243,7 +243,7 @@ class SecurityHubIntegration:
             steps.append("2. Review whether role is still needed — consider deletion")
 
         steps.append(
-            f"3. Review auto-generated least-privilege policy in S3 remediation artifacts"
+            "3. Review auto-generated least-privilege policy in S3 remediation artifacts"
         )
 
         return " | ".join(steps) if steps else "Review IAM permissions and apply least-privilege policy."

@@ -9,13 +9,10 @@ a broader attack surface. See ADR-003 in README.md.
 
 from __future__ import annotations
 
-import json
 import logging
-import re
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from enum import Enum
-from typing import Any
 
 from .escalation_paths import DetectedEscalation, EscalationDetector
 
@@ -203,8 +200,8 @@ class RiskScorer:
         if full_wildcards:
             score += 30
             findings.append(
-                f"Full wildcard action (*) grants all AWS permissions. "
-                f"This is equivalent to AdministratorAccess."
+                "Full wildcard action (*) grants all AWS permissions. "
+                "This is equivalent to AdministratorAccess."
             )
 
         elif sensitive_wildcards:

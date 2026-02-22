@@ -16,9 +16,7 @@ from datetime import datetime, timezone
 
 from src.scoring.escalation_paths import (
     EscalationDetector,
-    EscalationSeverity,
     ESCALATION_PATHS,
-    PATHS_BY_ID,
     _action_matches,
 )
 from src.scoring.risk_scorer import RiskScorer, Severity, score_to_severity
