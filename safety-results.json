@@ -1,0 +1,2589 @@
+{
+    "report_meta": {
+        "scan_target": "environment",
+        "scanned": [
+            "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages",
+            "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\site-packages"
+        ],
+        "scanned_full_path": [
+            "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages",
+            "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\site-packages"
+        ],
+        "target_languages": [
+            "python"
+        ],
+        "policy_file": null,
+        "policy_file_source": "local",
+        "audit_and_monitor": false,
+        "api_key": false,
+        "account": "",
+        "local_database_path": null,
+        "safety_version": "3.7.0",
+        "timestamp": "2026-02-22 23:25:55",
+        "packages_found": 102,
+        "vulnerabilities_found": 12,
+        "vulnerabilities_ignored": 0,
+        "remediations_recommended": 0,
+        "telemetry": {
+            "safety_options": {
+                "output": {
+                    "--output": 1
+                },
+                "save_json": {
+                    "--save-json": 1
+                }
+            },
+            "safety_version": "3.7.0",
+            "safety_source": "cli",
+            "os_type": "Windows",
+            "os_release": "11",
+            "os_description": "Windows-11-10.0.26100-SP0",
+            "python_version": "3.13.12",
+            "safety_command": "check"
+        },
+        "git": {
+            "branch": "main",
+            "tag": "",
+            "commit": "b00a6a4b2269f7de97a272893e81272336e8958c",
+            "dirty": "True",
+            "origin": "https://github.com/master-coder1998/aws-iam-least-privilege-analyzer"
+        },
+        "project": null,
+        "json_version": "1.1",
+        "remediations_attempted": 0,
+        "remediations_completed": 0,
+        "remediation_mode": "NON_INTERACTIVE"
+    },
+    "scanned_packages": {
+        "aiohappyeyeballs": {
+            "name": "aiohappyeyeballs",
+            "version": "2.6.1",
+            "requirements": [
+                {
+                    "raw": "aiohappyeyeballs==2.6.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "aiohappyeyeballs",
+                    "specifier": "==2.6.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohappyeyeballs-2.6.1.dist-info"
+                }
+            ]
+        },
+        "aiohttp": {
+            "name": "aiohttp",
+            "version": "3.12.15",
+            "requirements": [
+                {
+                    "raw": "aiohttp==3.12.15",
+                    "extras": [],
+                    "marker": null,
+                    "name": "aiohttp",
+                    "specifier": "==3.12.15",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+                }
+            ]
+        },
+        "aiosignal": {
+            "name": "aiosignal",
+            "version": "1.4.0",
+            "requirements": [
+                {
+                    "raw": "aiosignal==1.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "aiosignal",
+                    "specifier": "==1.4.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiosignal-1.4.0.dist-info"
+                }
+            ]
+        },
+        "altair": {
+            "name": "altair",
+            "version": "5.5.0",
+            "requirements": [
+                {
+                    "raw": "altair==5.5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "altair",
+                    "specifier": "==5.5.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\altair-5.5.0.dist-info"
+                }
+            ]
+        },
+        "annotated-doc": {
+            "name": "annotated-doc",
+            "version": "0.0.4",
+            "requirements": [
+                {
+                    "raw": "annotated-doc==0.0.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "annotated-doc",
+                    "specifier": "==0.0.4",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\annotated_doc-0.0.4.dist-info"
+                }
+            ]
+        },
+        "annotated-types": {
+            "name": "annotated-types",
+            "version": "0.7.0",
+            "requirements": [
+                {
+                    "raw": "annotated-types==0.7.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "annotated-types",
+                    "specifier": "==0.7.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\annotated_types-0.7.0.dist-info"
+                }
+            ]
+        },
+        "anyio": {
+            "name": "anyio",
+            "version": "4.12.1",
+            "requirements": [
+                {
+                    "raw": "anyio==4.12.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "anyio",
+                    "specifier": "==4.12.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\anyio-4.12.1.dist-info"
+                }
+            ]
+        },
+        "attrs": {
+            "name": "attrs",
+            "version": "25.3.0",
+            "requirements": [
+                {
+                    "raw": "attrs==25.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "attrs",
+                    "specifier": "==25.3.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\attrs-25.3.0.dist-info"
+                }
+            ]
+        },
+        "Authlib": {
+            "name": "Authlib",
+            "version": "1.6.8",
+            "requirements": [
+                {
+                    "raw": "Authlib==1.6.8",
+                    "extras": [],
+                    "marker": null,
+                    "name": "Authlib",
+                    "specifier": "==1.6.8",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\authlib-1.6.8.dist-info"
+                }
+            ]
+        },
+        "bandit": {
+            "name": "bandit",
+            "version": "1.9.3",
+            "requirements": [
+                {
+                    "raw": "bandit==1.9.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "bandit",
+                    "specifier": "==1.9.3",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\bandit-1.9.3.dist-info"
+                }
+            ]
+        },
+        "beautifulsoup4": {
+            "name": "beautifulsoup4",
+            "version": "4.13.4",
+            "requirements": [
+                {
+                    "raw": "beautifulsoup4==4.13.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "beautifulsoup4",
+                    "specifier": "==4.13.4",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\beautifulsoup4-4.13.4.dist-info"
+                }
+            ]
+        },
+        "blinker": {
+            "name": "blinker",
+            "version": "1.9.0",
+            "requirements": [
+                {
+                    "raw": "blinker==1.9.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "blinker",
+                    "specifier": "==1.9.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\blinker-1.9.0.dist-info"
+                }
+            ]
+        },
+        "cachetools": {
+            "name": "cachetools",
+            "version": "5.5.2",
+            "requirements": [
+                {
+                    "raw": "cachetools==5.5.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "cachetools",
+                    "specifier": "==5.5.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\cachetools-5.5.2.dist-info"
+                }
+            ]
+        },
+        "certifi": {
+            "name": "certifi",
+            "version": "2025.7.14",
+            "requirements": [
+                {
+                    "raw": "certifi==2025.7.14",
+                    "extras": [],
+                    "marker": null,
+                    "name": "certifi",
+                    "specifier": "==2025.7.14",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\certifi-2025.7.14.dist-info"
+                }
+            ]
+        },
+        "cffi": {
+            "name": "cffi",
+            "version": "2.0.0",
+            "requirements": [
+                {
+                    "raw": "cffi==2.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "cffi",
+                    "specifier": "==2.0.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\cffi-2.0.0.dist-info"
+                }
+            ]
+        },
+        "charset-normalizer": {
+            "name": "charset-normalizer",
+            "version": "3.4.2",
+            "requirements": [
+                {
+                    "raw": "charset-normalizer==3.4.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "charset-normalizer",
+                    "specifier": "==3.4.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\charset_normalizer-3.4.2.dist-info"
+                }
+            ]
+        },
+        "click": {
+            "name": "click",
+            "version": "8.2.1",
+            "requirements": [
+                {
+                    "raw": "click==8.2.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "click",
+                    "specifier": "==8.2.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\click-8.2.1.dist-info"
+                }
+            ]
+        },
+        "colorama": {
+            "name": "colorama",
+            "version": "0.4.6",
+            "requirements": [
+                {
+                    "raw": "colorama==0.4.6",
+                    "extras": [],
+                    "marker": null,
+                    "name": "colorama",
+                    "specifier": "==0.4.6",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\colorama-0.4.6.dist-info"
+                }
+            ]
+        },
+        "cryptography": {
+            "name": "cryptography",
+            "version": "46.0.5",
+            "requirements": [
+                {
+                    "raw": "cryptography==46.0.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "cryptography",
+                    "specifier": "==46.0.5",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\cryptography-46.0.5.dist-info"
+                }
+            ]
+        },
+        "dparse": {
+            "name": "dparse",
+            "version": "0.6.4",
+            "requirements": [
+                {
+                    "raw": "dparse==0.6.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "dparse",
+                    "specifier": "==0.6.4",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\dparse-0.6.4.dist-info"
+                }
+            ]
+        },
+        "filelock": {
+            "name": "filelock",
+            "version": "3.24.3",
+            "requirements": [
+                {
+                    "raw": "filelock==3.24.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "filelock",
+                    "specifier": "==3.24.3",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\filelock-3.24.3.dist-info"
+                }
+            ]
+        },
+        "frozenlist": {
+            "name": "frozenlist",
+            "version": "1.7.0",
+            "requirements": [
+                {
+                    "raw": "frozenlist==1.7.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "frozenlist",
+                    "specifier": "==1.7.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\frozenlist-1.7.0.dist-info"
+                }
+            ]
+        },
+        "gitdb": {
+            "name": "gitdb",
+            "version": "4.0.12",
+            "requirements": [
+                {
+                    "raw": "gitdb==4.0.12",
+                    "extras": [],
+                    "marker": null,
+                    "name": "gitdb",
+                    "specifier": "==4.0.12",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\gitdb-4.0.12.dist-info"
+                }
+            ]
+        },
+        "GitPython": {
+            "name": "GitPython",
+            "version": "3.1.45",
+            "requirements": [
+                {
+                    "raw": "GitPython==3.1.45",
+                    "extras": [],
+                    "marker": null,
+                    "name": "GitPython",
+                    "specifier": "==3.1.45",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\gitpython-3.1.45.dist-info"
+                }
+            ]
+        },
+        "google-auth": {
+            "name": "google-auth",
+            "version": "2.40.3",
+            "requirements": [
+                {
+                    "raw": "google-auth==2.40.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "google-auth",
+                    "specifier": "==2.40.3",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\google_auth-2.40.3.dist-info"
+                }
+            ]
+        },
+        "google-auth-oauthlib": {
+            "name": "google-auth-oauthlib",
+            "version": "1.2.2",
+            "requirements": [
+                {
+                    "raw": "google-auth-oauthlib==1.2.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "google-auth-oauthlib",
+                    "specifier": "==1.2.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\google_auth_oauthlib-1.2.2.dist-info"
+                }
+            ]
+        },
+        "gspread": {
+            "name": "gspread",
+            "version": "6.2.1",
+            "requirements": [
+                {
+                    "raw": "gspread==6.2.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "gspread",
+                    "specifier": "==6.2.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\gspread-6.2.1.dist-info"
+                }
+            ]
+        },
+        "h11": {
+            "name": "h11",
+            "version": "0.16.0",
+            "requirements": [
+                {
+                    "raw": "h11==0.16.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "h11",
+                    "specifier": "==0.16.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\h11-0.16.0.dist-info"
+                }
+            ]
+        },
+        "httpcore": {
+            "name": "httpcore",
+            "version": "1.0.9",
+            "requirements": [
+                {
+                    "raw": "httpcore==1.0.9",
+                    "extras": [],
+                    "marker": null,
+                    "name": "httpcore",
+                    "specifier": "==1.0.9",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\httpcore-1.0.9.dist-info"
+                }
+            ]
+        },
+        "httpx": {
+            "name": "httpx",
+            "version": "0.28.1",
+            "requirements": [
+                {
+                    "raw": "httpx==0.28.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "httpx",
+                    "specifier": "==0.28.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\httpx-0.28.1.dist-info"
+                }
+            ]
+        },
+        "idna": {
+            "name": "idna",
+            "version": "3.10",
+            "requirements": [
+                {
+                    "raw": "idna==3.10",
+                    "extras": [],
+                    "marker": null,
+                    "name": "idna",
+                    "specifier": "==3.10",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\idna-3.10.dist-info"
+                }
+            ]
+        },
+        "iniconfig": {
+            "name": "iniconfig",
+            "version": "2.3.0",
+            "requirements": [
+                {
+                    "raw": "iniconfig==2.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "iniconfig",
+                    "specifier": "==2.3.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\iniconfig-2.3.0.dist-info"
+                }
+            ]
+        },
+        "Jinja2": {
+            "name": "Jinja2",
+            "version": "3.1.6",
+            "requirements": [
+                {
+                    "raw": "Jinja2==3.1.6",
+                    "extras": [],
+                    "marker": null,
+                    "name": "Jinja2",
+                    "specifier": "==3.1.6",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\jinja2-3.1.6.dist-info"
+                }
+            ]
+        },
+        "joblib": {
+            "name": "joblib",
+            "version": "1.5.3",
+            "requirements": [
+                {
+                    "raw": "joblib==1.5.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "joblib",
+                    "specifier": "==1.5.3",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\joblib-1.5.3.dist-info"
+                }
+            ]
+        },
+        "jsonschema": {
+            "name": "jsonschema",
+            "version": "4.25.0",
+            "requirements": [
+                {
+                    "raw": "jsonschema==4.25.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jsonschema",
+                    "specifier": "==4.25.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\jsonschema-4.25.0.dist-info"
+                }
+            ]
+        },
+        "jsonschema-specifications": {
+            "name": "jsonschema-specifications",
+            "version": "2025.4.1",
+            "requirements": [
+                {
+                    "raw": "jsonschema-specifications==2025.4.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jsonschema-specifications",
+                    "specifier": "==2025.4.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\jsonschema_specifications-2025.4.1.dist-info"
+                }
+            ]
+        },
+        "librt": {
+            "name": "librt",
+            "version": "0.8.1",
+            "requirements": [
+                {
+                    "raw": "librt==0.8.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "librt",
+                    "specifier": "==0.8.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\librt-0.8.1.dist-info"
+                }
+            ]
+        },
+        "markdown-it-py": {
+            "name": "markdown-it-py",
+            "version": "4.0.0",
+            "requirements": [
+                {
+                    "raw": "markdown-it-py==4.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "markdown-it-py",
+                    "specifier": "==4.0.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\markdown_it_py-4.0.0.dist-info"
+                }
+            ]
+        },
+        "MarkupSafe": {
+            "name": "MarkupSafe",
+            "version": "3.0.2",
+            "requirements": [
+                {
+                    "raw": "MarkupSafe==3.0.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "MarkupSafe",
+                    "specifier": "==3.0.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\MarkupSafe-3.0.2.dist-info"
+                }
+            ]
+        },
+        "marshmallow": {
+            "name": "marshmallow",
+            "version": "4.2.2",
+            "requirements": [
+                {
+                    "raw": "marshmallow==4.2.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "marshmallow",
+                    "specifier": "==4.2.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\marshmallow-4.2.2.dist-info"
+                }
+            ]
+        },
+        "mdurl": {
+            "name": "mdurl",
+            "version": "0.1.2",
+            "requirements": [
+                {
+                    "raw": "mdurl==0.1.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "mdurl",
+                    "specifier": "==0.1.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\mdurl-0.1.2.dist-info"
+                }
+            ]
+        },
+        "multidict": {
+            "name": "multidict",
+            "version": "6.6.3",
+            "requirements": [
+                {
+                    "raw": "multidict==6.6.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "multidict",
+                    "specifier": "==6.6.3",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\multidict-6.6.3.dist-info"
+                }
+            ]
+        },
+        "mypy": {
+            "name": "mypy",
+            "version": "1.19.1",
+            "requirements": [
+                {
+                    "raw": "mypy==1.19.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "mypy",
+                    "specifier": "==1.19.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\mypy-1.19.1.dist-info"
+                }
+            ]
+        },
+        "mypy_extensions": {
+            "name": "mypy_extensions",
+            "version": "1.1.0",
+            "requirements": [
+                {
+                    "raw": "mypy_extensions==1.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "mypy_extensions",
+                    "specifier": "==1.1.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\mypy_extensions-1.1.0.dist-info"
+                }
+            ]
+        },
+        "narwhals": {
+            "name": "narwhals",
+            "version": "2.0.1",
+            "requirements": [
+                {
+                    "raw": "narwhals==2.0.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "narwhals",
+                    "specifier": "==2.0.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\narwhals-2.0.1.dist-info"
+                }
+            ]
+        },
+        "nltk": {
+            "name": "nltk",
+            "version": "3.9.2",
+            "requirements": [
+                {
+                    "raw": "nltk==3.9.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "nltk",
+                    "specifier": "==3.9.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\nltk-3.9.2.dist-info"
+                }
+            ]
+        },
+        "numpy": {
+            "name": "numpy",
+            "version": "2.3.2",
+            "requirements": [
+                {
+                    "raw": "numpy==2.3.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "numpy",
+                    "specifier": "==2.3.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\numpy-2.3.2.dist-info"
+                }
+            ]
+        },
+        "oauthlib": {
+            "name": "oauthlib",
+            "version": "3.3.1",
+            "requirements": [
+                {
+                    "raw": "oauthlib==3.3.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "oauthlib",
+                    "specifier": "==3.3.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\oauthlib-3.3.1.dist-info"
+                }
+            ]
+        },
+        "openai": {
+            "name": "openai",
+            "version": "0.28.0",
+            "requirements": [
+                {
+                    "raw": "openai==0.28.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "openai",
+                    "specifier": "==0.28.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\openai-0.28.0.dist-info"
+                }
+            ]
+        },
+        "packaging": {
+            "name": "packaging",
+            "version": "25.0",
+            "requirements": [
+                {
+                    "raw": "packaging==25.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "packaging",
+                    "specifier": "==25.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\packaging-25.0.dist-info"
+                }
+            ]
+        },
+        "pandas": {
+            "name": "pandas",
+            "version": "2.3.1",
+            "requirements": [
+                {
+                    "raw": "pandas==2.3.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pandas",
+                    "specifier": "==2.3.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pandas-2.3.1.dist-info"
+                }
+            ]
+        },
+        "pathspec": {
+            "name": "pathspec",
+            "version": "1.0.4",
+            "requirements": [
+                {
+                    "raw": "pathspec==1.0.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pathspec",
+                    "specifier": "==1.0.4",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pathspec-1.0.4.dist-info"
+                }
+            ]
+        },
+        "pillow": {
+            "name": "pillow",
+            "version": "11.3.0",
+            "requirements": [
+                {
+                    "raw": "pillow==11.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pillow",
+                    "specifier": "==11.3.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pillow-11.3.0.dist-info"
+                }
+            ]
+        },
+        "pluggy": {
+            "name": "pluggy",
+            "version": "1.6.0",
+            "requirements": [
+                {
+                    "raw": "pluggy==1.6.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pluggy",
+                    "specifier": "==1.6.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pluggy-1.6.0.dist-info"
+                }
+            ]
+        },
+        "praw": {
+            "name": "praw",
+            "version": "7.7.1",
+            "requirements": [
+                {
+                    "raw": "praw==7.7.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "praw",
+                    "specifier": "==7.7.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\praw-7.7.1.dist-info"
+                }
+            ]
+        },
+        "prawcore": {
+            "name": "prawcore",
+            "version": "2.4.0",
+            "requirements": [
+                {
+                    "raw": "prawcore==2.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "prawcore",
+                    "specifier": "==2.4.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\prawcore-2.4.0.dist-info"
+                }
+            ]
+        },
+        "propcache": {
+            "name": "propcache",
+            "version": "0.3.2",
+            "requirements": [
+                {
+                    "raw": "propcache==0.3.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "propcache",
+                    "specifier": "==0.3.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\propcache-0.3.2.dist-info"
+                }
+            ]
+        },
+        "protobuf": {
+            "name": "protobuf",
+            "version": "6.31.1",
+            "requirements": [
+                {
+                    "raw": "protobuf==6.31.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "protobuf",
+                    "specifier": "==6.31.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\protobuf-6.31.1.dist-info"
+                }
+            ]
+        },
+        "pyarrow": {
+            "name": "pyarrow",
+            "version": "21.0.0",
+            "requirements": [
+                {
+                    "raw": "pyarrow==21.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pyarrow",
+                    "specifier": "==21.0.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyarrow-21.0.0.dist-info"
+                }
+            ]
+        },
+        "pyasn1": {
+            "name": "pyasn1",
+            "version": "0.6.1",
+            "requirements": [
+                {
+                    "raw": "pyasn1==0.6.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pyasn1",
+                    "specifier": "==0.6.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyasn1-0.6.1.dist-info"
+                }
+            ]
+        },
+        "pyasn1_modules": {
+            "name": "pyasn1_modules",
+            "version": "0.4.2",
+            "requirements": [
+                {
+                    "raw": "pyasn1_modules==0.4.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pyasn1_modules",
+                    "specifier": "==0.4.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyasn1_modules-0.4.2.dist-info"
+                }
+            ]
+        },
+        "pycparser": {
+            "name": "pycparser",
+            "version": "3.0",
+            "requirements": [
+                {
+                    "raw": "pycparser==3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pycparser",
+                    "specifier": "==3.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pycparser-3.0.dist-info"
+                }
+            ]
+        },
+        "pydantic": {
+            "name": "pydantic",
+            "version": "2.12.5",
+            "requirements": [
+                {
+                    "raw": "pydantic==2.12.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pydantic",
+                    "specifier": "==2.12.5",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pydantic-2.12.5.dist-info"
+                }
+            ]
+        },
+        "pydantic_core": {
+            "name": "pydantic_core",
+            "version": "2.41.5",
+            "requirements": [
+                {
+                    "raw": "pydantic_core==2.41.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pydantic_core",
+                    "specifier": "==2.41.5",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pydantic_core-2.41.5.dist-info"
+                }
+            ]
+        },
+        "pydeck": {
+            "name": "pydeck",
+            "version": "0.9.1",
+            "requirements": [
+                {
+                    "raw": "pydeck==0.9.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pydeck",
+                    "specifier": "==0.9.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pydeck-0.9.1.dist-info"
+                }
+            ]
+        },
+        "Pygments": {
+            "name": "Pygments",
+            "version": "2.19.2",
+            "requirements": [
+                {
+                    "raw": "Pygments==2.19.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "Pygments",
+                    "specifier": "==2.19.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pygments-2.19.2.dist-info"
+                }
+            ]
+        },
+        "pytest": {
+            "name": "pytest",
+            "version": "9.0.2",
+            "requirements": [
+                {
+                    "raw": "pytest==9.0.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pytest",
+                    "specifier": "==9.0.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pytest-9.0.2.dist-info"
+                }
+            ]
+        },
+        "python-dateutil": {
+            "name": "python-dateutil",
+            "version": "2.9.0.post0",
+            "requirements": [
+                {
+                    "raw": "python-dateutil==2.9.0.post0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "python-dateutil",
+                    "specifier": "==2.9.0.post0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\python_dateutil-2.9.0.post0.dist-info"
+                }
+            ]
+        },
+        "pytz": {
+            "name": "pytz",
+            "version": "2025.2",
+            "requirements": [
+                {
+                    "raw": "pytz==2025.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pytz",
+                    "specifier": "==2025.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pytz-2025.2.dist-info"
+                }
+            ]
+        },
+        "PyYAML": {
+            "name": "PyYAML",
+            "version": "6.0.3",
+            "requirements": [
+                {
+                    "raw": "PyYAML==6.0.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "PyYAML",
+                    "specifier": "==6.0.3",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyyaml-6.0.3.dist-info"
+                }
+            ]
+        },
+        "referencing": {
+            "name": "referencing",
+            "version": "0.36.2",
+            "requirements": [
+                {
+                    "raw": "referencing==0.36.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "referencing",
+                    "specifier": "==0.36.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\referencing-0.36.2.dist-info"
+                }
+            ]
+        },
+        "regex": {
+            "name": "regex",
+            "version": "2026.2.19",
+            "requirements": [
+                {
+                    "raw": "regex==2026.2.19",
+                    "extras": [],
+                    "marker": null,
+                    "name": "regex",
+                    "specifier": "==2026.2.19",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\regex-2026.2.19.dist-info"
+                }
+            ]
+        },
+        "requests": {
+            "name": "requests",
+            "version": "2.32.4",
+            "requirements": [
+                {
+                    "raw": "requests==2.32.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "requests",
+                    "specifier": "==2.32.4",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\requests-2.32.4.dist-info"
+                }
+            ]
+        },
+        "requests-oauthlib": {
+            "name": "requests-oauthlib",
+            "version": "2.0.0",
+            "requirements": [
+                {
+                    "raw": "requests-oauthlib==2.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "requests-oauthlib",
+                    "specifier": "==2.0.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\requests_oauthlib-2.0.0.dist-info"
+                }
+            ]
+        },
+        "rich": {
+            "name": "rich",
+            "version": "14.3.3",
+            "requirements": [
+                {
+                    "raw": "rich==14.3.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "rich",
+                    "specifier": "==14.3.3",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\rich-14.3.3.dist-info"
+                }
+            ]
+        },
+        "rpds-py": {
+            "name": "rpds-py",
+            "version": "0.26.0",
+            "requirements": [
+                {
+                    "raw": "rpds-py==0.26.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "rpds-py",
+                    "specifier": "==0.26.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\rpds_py-0.26.0.dist-info"
+                }
+            ]
+        },
+        "rsa": {
+            "name": "rsa",
+            "version": "4.9.1",
+            "requirements": [
+                {
+                    "raw": "rsa==4.9.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "rsa",
+                    "specifier": "==4.9.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\rsa-4.9.1.dist-info"
+                }
+            ]
+        },
+        "ruamel.yaml": {
+            "name": "ruamel.yaml",
+            "version": "0.19.1",
+            "requirements": [
+                {
+                    "raw": "ruamel.yaml==0.19.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "ruamel.yaml",
+                    "specifier": "==0.19.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\ruamel_yaml-0.19.1.dist-info"
+                }
+            ]
+        },
+        "ruff": {
+            "name": "ruff",
+            "version": "0.15.2",
+            "requirements": [
+                {
+                    "raw": "ruff==0.15.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "ruff",
+                    "specifier": "==0.15.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\ruff-0.15.2.dist-info"
+                }
+            ]
+        },
+        "safety": {
+            "name": "safety",
+            "version": "3.7.0",
+            "requirements": [
+                {
+                    "raw": "safety==3.7.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "safety",
+                    "specifier": "==3.7.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\safety-3.7.0.dist-info"
+                }
+            ]
+        },
+        "safety-schemas": {
+            "name": "safety-schemas",
+            "version": "0.0.16",
+            "requirements": [
+                {
+                    "raw": "safety-schemas==0.0.16",
+                    "extras": [],
+                    "marker": null,
+                    "name": "safety-schemas",
+                    "specifier": "==0.0.16",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\safety_schemas-0.0.16.dist-info"
+                }
+            ]
+        },
+        "shellingham": {
+            "name": "shellingham",
+            "version": "1.5.4",
+            "requirements": [
+                {
+                    "raw": "shellingham==1.5.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "shellingham",
+                    "specifier": "==1.5.4",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\shellingham-1.5.4.dist-info"
+                }
+            ]
+        },
+        "six": {
+            "name": "six",
+            "version": "1.17.0",
+            "requirements": [
+                {
+                    "raw": "six==1.17.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "six",
+                    "specifier": "==1.17.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\six-1.17.0.dist-info"
+                }
+            ]
+        },
+        "smmap": {
+            "name": "smmap",
+            "version": "5.0.2",
+            "requirements": [
+                {
+                    "raw": "smmap==5.0.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "smmap",
+                    "specifier": "==5.0.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\smmap-5.0.2.dist-info"
+                }
+            ]
+        },
+        "soupsieve": {
+            "name": "soupsieve",
+            "version": "2.7",
+            "requirements": [
+                {
+                    "raw": "soupsieve==2.7",
+                    "extras": [],
+                    "marker": null,
+                    "name": "soupsieve",
+                    "specifier": "==2.7",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\soupsieve-2.7.dist-info"
+                }
+            ]
+        },
+        "stevedore": {
+            "name": "stevedore",
+            "version": "5.7.0",
+            "requirements": [
+                {
+                    "raw": "stevedore==5.7.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "stevedore",
+                    "specifier": "==5.7.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\stevedore-5.7.0.dist-info"
+                }
+            ]
+        },
+        "streamlit": {
+            "name": "streamlit",
+            "version": "1.47.1",
+            "requirements": [
+                {
+                    "raw": "streamlit==1.47.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "streamlit",
+                    "specifier": "==1.47.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\streamlit-1.47.1.dist-info"
+                }
+            ]
+        },
+        "tenacity": {
+            "name": "tenacity",
+            "version": "9.1.2",
+            "requirements": [
+                {
+                    "raw": "tenacity==9.1.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tenacity",
+                    "specifier": "==9.1.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\tenacity-9.1.2.dist-info"
+                }
+            ]
+        },
+        "toml": {
+            "name": "toml",
+            "version": "0.10.2",
+            "requirements": [
+                {
+                    "raw": "toml==0.10.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "toml",
+                    "specifier": "==0.10.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\toml-0.10.2.dist-info"
+                }
+            ]
+        },
+        "tomlkit": {
+            "name": "tomlkit",
+            "version": "0.14.0",
+            "requirements": [
+                {
+                    "raw": "tomlkit==0.14.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tomlkit",
+                    "specifier": "==0.14.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\tomlkit-0.14.0.dist-info"
+                }
+            ]
+        },
+        "tornado": {
+            "name": "tornado",
+            "version": "6.5.1",
+            "requirements": [
+                {
+                    "raw": "tornado==6.5.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tornado",
+                    "specifier": "==6.5.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\tornado-6.5.1.dist-info"
+                }
+            ]
+        },
+        "tqdm": {
+            "name": "tqdm",
+            "version": "4.67.1",
+            "requirements": [
+                {
+                    "raw": "tqdm==4.67.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tqdm",
+                    "specifier": "==4.67.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\tqdm-4.67.1.dist-info"
+                }
+            ]
+        },
+        "typer": {
+            "name": "typer",
+            "version": "0.24.1",
+            "requirements": [
+                {
+                    "raw": "typer==0.24.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "typer",
+                    "specifier": "==0.24.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\typer-0.24.1.dist-info"
+                }
+            ]
+        },
+        "typing_extensions": {
+            "name": "typing_extensions",
+            "version": "4.14.1",
+            "requirements": [
+                {
+                    "raw": "typing_extensions==4.14.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "typing_extensions",
+                    "specifier": "==4.14.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\typing_extensions-4.14.1.dist-info"
+                }
+            ]
+        },
+        "typing-inspection": {
+            "name": "typing-inspection",
+            "version": "0.4.2",
+            "requirements": [
+                {
+                    "raw": "typing-inspection==0.4.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "typing-inspection",
+                    "specifier": "==0.4.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\typing_inspection-0.4.2.dist-info"
+                }
+            ]
+        },
+        "tzdata": {
+            "name": "tzdata",
+            "version": "2025.2",
+            "requirements": [
+                {
+                    "raw": "tzdata==2025.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tzdata",
+                    "specifier": "==2025.2",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\tzdata-2025.2.dist-info"
+                }
+            ]
+        },
+        "update-checker": {
+            "name": "update-checker",
+            "version": "0.18.0",
+            "requirements": [
+                {
+                    "raw": "update-checker==0.18.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "update-checker",
+                    "specifier": "==0.18.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\update_checker-0.18.0.dist-info"
+                }
+            ]
+        },
+        "urllib3": {
+            "name": "urllib3",
+            "version": "2.5.0",
+            "requirements": [
+                {
+                    "raw": "urllib3==2.5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "urllib3",
+                    "specifier": "==2.5.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\urllib3-2.5.0.dist-info"
+                }
+            ]
+        },
+        "watchdog": {
+            "name": "watchdog",
+            "version": "6.0.0",
+            "requirements": [
+                {
+                    "raw": "watchdog==6.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "watchdog",
+                    "specifier": "==6.0.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\watchdog-6.0.0.dist-info"
+                }
+            ]
+        },
+        "websocket-client": {
+            "name": "websocket-client",
+            "version": "1.9.0",
+            "requirements": [
+                {
+                    "raw": "websocket-client==1.9.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "websocket-client",
+                    "specifier": "==1.9.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\websocket_client-1.9.0.dist-info"
+                }
+            ]
+        },
+        "yarl": {
+            "name": "yarl",
+            "version": "1.20.1",
+            "requirements": [
+                {
+                    "raw": "yarl==1.20.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "yarl",
+                    "specifier": "==1.20.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\yarl-1.20.1.dist-info"
+                }
+            ]
+        },
+        "pip": {
+            "name": "pip",
+            "version": "25.3",
+            "requirements": [
+                {
+                    "raw": "pip==25.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pip",
+                    "specifier": "==25.3",
+                    "url": null,
+                    "found": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\site-packages\\pip-25.3.dist-info"
+                }
+            ]
+        }
+    },
+    "affected_packages": {
+        "urllib3": {
+            "name": "urllib3",
+            "version": "2.5.0",
+            "requirements": [
+                {
+                    "raw": "urllib3==2.5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "urllib3",
+                    "specifier": "==2.5.0",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\urllib3-2.5.0.dist-info"
+                }
+            ],
+            "found": null,
+            "insecure_versions": [
+                "0.2",
+                "0.3",
+                "0.3.1",
+                "0.4.0",
+                "0.4.1",
+                "1.0",
+                "1.0.1",
+                "1.0.2",
+                "1.1",
+                "1.10",
+                "1.10.1",
+                "1.10.2",
+                "1.10.3",
+                "1.10.4",
+                "1.11",
+                "1.12",
+                "1.13",
+                "1.13.1",
+                "1.14",
+                "1.15",
+                "1.15.1",
+                "1.16",
+                "1.17",
+                "1.18",
+                "1.18.1",
+                "1.19",
+                "1.19.1",
+                "1.2",
+                "1.20",
+                "1.21",
+                "1.2.1",
+                "1.21.1",
+                "1.22",
+                "1.2.2",
+                "1.23",
+                "1.24",
+                "1.24.1",
+                "1.24.2",
+                "1.24.3",
+                "1.25",
+                "1.25.1",
+                "1.25.10",
+                "1.25.11",
+                "1.25.2",
+                "1.25.3",
+                "1.25.4",
+                "1.25.5",
+                "1.25.6",
+                "1.25.7",
+                "1.25.8",
+                "1.25.9",
+                "1.26.0",
+                "1.26.1",
+                "1.26.10",
+                "1.26.11",
+                "1.26.12",
+                "1.26.13",
+                "1.26.14",
+                "1.26.15",
+                "1.26.16",
+                "1.26.17",
+                "1.26.18",
+                "1.26.19",
+                "1.26.2",
+                "1.26.20",
+                "1.26.3",
+                "1.26.4",
+                "1.26.5",
+                "1.26.6",
+                "1.26.7",
+                "1.26.8",
+                "1.26.9",
+                "1.3",
+                "1.4",
+                "1.5",
+                "1.6",
+                "1.7",
+                "1.7.1",
+                "1.8",
+                "1.8.2",
+                "1.8.3",
+                "1.9",
+                "1.9.1",
+                "2.0.0",
+                "2.0.0a1",
+                "2.0.0a2",
+                "2.0.0a3",
+                "2.0.0a4",
+                "2.0.1",
+                "2.0.2",
+                "2.0.3",
+                "2.0.4",
+                "2.0.5",
+                "2.0.6",
+                "2.0.7",
+                "2.1.0",
+                "2.2.0",
+                "2.2.1",
+                "2.2.2",
+                "2.2.3",
+                "2.3.0",
+                "2.4.0",
+                "2.5.0",
+                "2.6.0",
+                "2.6.1",
+                "2.6.2"
+            ],
+            "secure_versions": [
+                "2.6.3"
+            ],
+            "latest_version_without_known_vulnerabilities": "2.6.3",
+            "latest_version": "2.6.3",
+            "more_info_url": "https://data.safetycli.com/p/pypi/urllib3/97c/"
+        },
+        "pyasn1": {
+            "name": "pyasn1",
+            "version": "0.6.1",
+            "requirements": [
+                {
+                    "raw": "pyasn1==0.6.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pyasn1",
+                    "specifier": "==0.6.1",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyasn1-0.6.1.dist-info"
+                }
+            ],
+            "found": null,
+            "insecure_versions": [
+                "0.6.1"
+            ],
+            "secure_versions": [
+                "0.6.2",
+                "0.6.0",
+                "0.5.1",
+                "0.5.0",
+                "0.4.8",
+                "0.4.7",
+                "0.4.6",
+                "0.4.5",
+                "0.4.4",
+                "0.4.3",
+                "0.4.2",
+                "0.4.1",
+                "0.3.7",
+                "0.3.6",
+                "0.3.5",
+                "0.3.4",
+                "0.3.3",
+                "0.3.2",
+                "0.3.1",
+                "0.2.3",
+                "0.2.2",
+                "0.2.1",
+                "0.1.9",
+                "0.1.8",
+                "0.1.7",
+                "0.1.6",
+                "0.1.5",
+                "0.1.4",
+                "0.1.3",
+                "0.1.2",
+                "0.1.1",
+                "0.0.13",
+                "0.0.13b0",
+                "0.0.13a0",
+                "0.0.12a0",
+                "0.0.11a0",
+                "0.0.10a0",
+                "0.0.9a0",
+                "0.0.6a0"
+            ],
+            "latest_version_without_known_vulnerabilities": "0.6.2",
+            "latest_version": "0.6.2",
+            "more_info_url": "https://data.safetycli.com/p/pypi/pyasn1/97c/"
+        },
+        "aiohttp": {
+            "name": "aiohttp",
+            "version": "3.12.15",
+            "requirements": [
+                {
+                    "raw": "aiohttp==3.12.15",
+                    "extras": [],
+                    "marker": null,
+                    "name": "aiohttp",
+                    "specifier": "==3.12.15",
+                    "url": null,
+                    "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+                }
+            ],
+            "found": null,
+            "insecure_versions": [
+                "0.1",
+                "0.10.0",
+                "0.10.1",
+                "0.10.2",
+                "0.11.0",
+                "0.12.0",
+                "0.13.0",
+                "0.13.1",
+                "0.14.0",
+                "0.14.1",
+                "0.14.2",
+                "0.14.3",
+                "0.14.4",
+                "0.15.0",
+                "0.15.1",
+                "0.15.2",
+                "0.15.3",
+                "0.16.0",
+                "0.16.1",
+                "0.16.2",
+                "0.16.3",
+                "0.16.4",
+                "0.16.5",
+                "0.16.6",
+                "0.17.0",
+                "0.17.1",
+                "0.17.2",
+                "0.17.3",
+                "0.17.4",
+                "0.18.0",
+                "0.18.1",
+                "0.18.2",
+                "0.18.3",
+                "0.18.4",
+                "0.19.0",
+                "0.2",
+                "0.20.0",
+                "0.20.1",
+                "0.20.2",
+                "0.21.0",
+                "0.21.1",
+                "0.21.2",
+                "0.21.4",
+                "0.21.5",
+                "0.21.6",
+                "0.22.0",
+                "0.22.0a0",
+                "0.22.0b0",
+                "0.22.0b1",
+                "0.22.0b2",
+                "0.22.0b3",
+                "0.22.0b4",
+                "0.22.0b5",
+                "0.22.0b6",
+                "0.22.1",
+                "0.22.2",
+                "0.22.3",
+                "0.22.4",
+                "0.22.5",
+                "0.3",
+                "0.4",
+                "0.4.1",
+                "0.4.2",
+                "0.4.3",
+                "0.4.4",
+                "0.5.0",
+                "0.6.0",
+                "0.6.1",
+                "0.6.2",
+                "0.6.3",
+                "0.6.4",
+                "0.6.5",
+                "0.7.0",
+                "0.7.1",
+                "0.7.2",
+                "0.7.3",
+                "0.8.0",
+                "0.8.1",
+                "0.8.2",
+                "0.8.3",
+                "0.8.4",
+                "0.9.0",
+                "0.9.1",
+                "0.9.2",
+                "0.9.3",
+                "1.0.0",
+                "1.0.1",
+                "1.0.2",
+                "1.0.3",
+                "1.0.5",
+                "1.1.0",
+                "1.1.1",
+                "1.1.2",
+                "1.1.3",
+                "1.1.4",
+                "1.1.5",
+                "1.1.6",
+                "1.2.0",
+                "1.3.0",
+                "1.3.1",
+                "1.3.2",
+                "1.3.3",
+                "1.3.4",
+                "1.3.5",
+                "2.0.0",
+                "2.0.0rc1",
+                "2.0.1",
+                "2.0.2",
+                "2.0.3",
+                "2.0.4",
+                "2.0.5",
+                "2.0.6",
+                "2.0.7",
+                "2.1.0",
+                "2.2.0",
+                "2.2.1",
+                "2.2.2",
+                "2.2.3",
+                "2.2.4",
+                "2.2.5",
+                "2.3.0",
+                "2.3.0a1",
+                "2.3.0a2",
+                "2.3.0a3",
+                "2.3.0a4",
+                "2.3.1",
+                "2.3.10",
+                "2.3.1a1",
+                "2.3.2",
+                "2.3.2b2",
+                "2.3.2b3",
+                "2.3.3",
+                "2.3.4",
+                "2.3.5",
+                "2.3.6",
+                "2.3.7",
+                "2.3.8",
+                "2.3.9",
+                "3.0.0",
+                "3.0.0b0",
+                "3.0.0b1",
+                "3.0.0b2",
+                "3.0.0b3",
+                "3.0.0b4",
+                "3.0.1",
+                "3.0.2",
+                "3.0.3",
+                "3.0.4",
+                "3.0.5",
+                "3.0.6",
+                "3.0.7",
+                "3.0.8",
+                "3.0.9",
+                "3.1.0",
+                "3.10.0",
+                "3.10.0b1",
+                "3.10.0rc0",
+                "3.10.1",
+                "3.10.10",
+                "3.10.11",
+                "3.10.11rc0",
+                "3.10.2",
+                "3.10.3",
+                "3.10.4",
+                "3.10.5",
+                "3.10.6",
+                "3.10.6rc0",
+                "3.10.6rc1",
+                "3.10.6rc2",
+                "3.10.7",
+                "3.10.8",
+                "3.10.9",
+                "3.1.1",
+                "3.11.0",
+                "3.11.0b0",
+                "3.11.0b1",
+                "3.11.0b2",
+                "3.11.0b3",
+                "3.11.0b4",
+                "3.11.0b5",
+                "3.11.0rc0",
+                "3.11.0rc1",
+                "3.11.0rc2",
+                "3.11.1",
+                "3.11.10",
+                "3.11.11",
+                "3.11.12",
+                "3.11.13",
+                "3.11.14",
+                "3.11.15",
+                "3.11.16",
+                "3.11.17",
+                "3.11.18",
+                "3.11.2",
+                "3.11.3",
+                "3.11.4",
+                "3.11.5",
+                "3.11.6",
+                "3.11.7",
+                "3.11.8",
+                "3.11.9",
+                "3.1.2",
+                "3.12.0",
+                "3.12.0b0",
+                "3.12.0b1",
+                "3.12.0b2",
+                "3.12.0b3",
+                "3.12.0rc0",
+                "3.12.0rc1",
+                "3.12.1",
+                "3.12.10",
+                "3.12.11",
+                "3.12.12",
+                "3.12.13",
+                "3.12.14",
+                "3.12.15",
+                "3.12.1rc0",
+                "3.12.2",
+                "3.12.3",
+                "3.12.4",
+                "3.12.6",
+                "3.12.7",
+                "3.12.7rc0",
+                "3.12.8",
+                "3.12.9",
+                "3.1.3",
+                "3.13.0",
+                "3.13.1",
+                "3.13.2",
+                "3.2.0",
+                "3.2.1",
+                "3.3.0",
+                "3.3.0a0",
+                "3.3.1",
+                "3.3.2",
+                "3.3.2a0",
+                "3.4.0",
+                "3.4.0a0",
+                "3.4.0a3",
+                "3.4.0b1",
+                "3.4.0b2",
+                "3.4.1",
+                "3.4.2",
+                "3.4.3",
+                "3.4.4",
+                "3.5.0",
+                "3.5.0a1",
+                "3.5.0b1",
+                "3.5.0b2",
+                "3.5.0b3",
+                "3.5.1",
+                "3.5.2",
+                "3.5.3",
+                "3.5.4",
+                "3.6.0",
+                "3.6.0a0",
+                "3.6.0a1",
+                "3.6.0a11",
+                "3.6.0a12",
+                "3.6.0a2",
+                "3.6.0a3",
+                "3.6.0a4",
+                "3.6.0a5",
+                "3.6.0a6",
+                "3.6.0a7",
+                "3.6.0a8",
+                "3.6.0a9",
+                "3.6.0b0",
+                "3.6.1",
+                "3.6.1b3",
+                "3.6.1b4",
+                "3.6.2",
+                "3.6.2a0",
+                "3.6.2a1",
+                "3.6.2a2",
+                "3.6.3",
+                "3.7.0",
+                "3.7.0b0",
+                "3.7.0b1",
+                "3.7.1",
+                "3.7.2",
+                "3.7.3",
+                "3.7.4",
+                "3.7.4.post0",
+                "3.8.0",
+                "3.8.0a7",
+                "3.8.0b0",
+                "3.8.1",
+                "3.8.2",
+                "3.8.3",
+                "3.8.4",
+                "3.8.5",
+                "3.8.6",
+                "3.9.0",
+                "3.9.0b0",
+                "3.9.0b1",
+                "3.9.0rc0",
+                "3.9.1",
+                "3.9.2",
+                "3.9.3",
+                "3.9.4",
+                "3.9.4rc0",
+                "3.9.5",
+                "4.0.0a0",
+                "4.0.0a1"
+            ],
+            "secure_versions": [
+                "3.13.3"
+            ],
+            "latest_version_without_known_vulnerabilities": "3.13.3",
+            "latest_version": "3.13.3",
+            "more_info_url": "https://data.safetycli.com/p/pypi/aiohttp/97c/"
+        }
+    },
+    "announcements": [],
+    "vulnerabilities": [
+        {
+            "vulnerability_id": "82331",
+            "package_name": "urllib3",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                ">=1.24,<2.6.0"
+            ],
+            "all_vulnerable_specs": [
+                ">=1.24,<2.6.0"
+            ],
+            "analyzed_version": "2.5.0",
+            "analyzed_requirement": {
+                "raw": "urllib3==2.5.0",
+                "extras": [],
+                "marker": null,
+                "name": "urllib3",
+                "specifier": "==2.5.0",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\urllib3-2.5.0.dist-info"
+            },
+            "advisory": "Affected versions of the urllib3 package are vulnerable to Denial of Service (DoS) due to allowing an unbounded number of content-encoding decompression steps for HTTP responses. The HTTPResponse content decoding pipeline in urllib3 follows the Content-Encoding header and applies each advertised compression algorithm in sequence without enforcing a maximum chain length or effective output size, so a malicious peer can send a response with a very long encoding chain that triggers excessive CPU use and massive memory allocation during decompression.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-66418",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/82331/97c"
+        },
+        {
+            "vulnerability_id": "84031",
+            "package_name": "urllib3",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                ">=1.22,<2.6.3"
+            ],
+            "all_vulnerable_specs": [
+                ">=1.22,<2.6.3"
+            ],
+            "analyzed_version": "2.5.0",
+            "analyzed_requirement": {
+                "raw": "urllib3==2.5.0",
+                "extras": [],
+                "marker": null,
+                "name": "urllib3",
+                "specifier": "==2.5.0",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\urllib3-2.5.0.dist-info"
+            },
+            "advisory": "Affected versions of the urllib3 package are vulnerable to Denial of Service (DoS) due to redirect handling that drains connections by decompressing redirect response bodies without enforcing streaming read limits. The issue occurs when using urllib3\u2019s streaming mode (for example, preload_content=False) while allowing redirects, because urllib3.response.HTTPResponse.drain_conn() would call HTTPResponse.read() in a way that decoded/decompressed the entire redirect response body even before any streaming reads were performed, effectively bypassing decompression-bomb safeguards.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2026-21441",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/84031/97c"
+        },
+        {
+            "vulnerability_id": "82332",
+            "package_name": "urllib3",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                ">=1.0,<2.6.0"
+            ],
+            "all_vulnerable_specs": [
+                ">=1.0,<2.6.0"
+            ],
+            "analyzed_version": "2.5.0",
+            "analyzed_requirement": {
+                "raw": "urllib3==2.5.0",
+                "extras": [],
+                "marker": null,
+                "name": "urllib3",
+                "specifier": "==2.5.0",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\urllib3-2.5.0.dist-info"
+            },
+            "advisory": "Affected versions of the urllib3 package are vulnerable to Denial of Service (DoS) due to improper handling of highly compressed HTTP response bodies during streaming decompression. The urllib3.HTTPResponse methods stream(), read(), read1(), read_chunked(), and readinto() may fully decompress a minimal but highly compressed payload based on the Content-Encoding header into an internal buffer instead of limiting the decompressed output to the requested chunk size, causing excessive CPU usage and massive memory allocation on the client side.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-66471",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/82332/97c"
+        },
+        {
+            "vulnerability_id": "84605",
+            "package_name": "pyasn1",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "==0.6.1"
+            ],
+            "all_vulnerable_specs": [
+                "==0.6.1"
+            ],
+            "analyzed_version": "0.6.1",
+            "analyzed_requirement": {
+                "raw": "pyasn1==0.6.1",
+                "extras": [],
+                "marker": null,
+                "name": "pyasn1",
+                "specifier": "==0.6.1",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyasn1-0.6.1.dist-info"
+            },
+            "advisory": "Affected versions of the pyasn1 package are vulnerable to Denial of Service (DoS) due to unbounded decoding of malformed RELATIVE-OID values with excessive continuation octets. In pyasn1/codec/ber/decoder.py, the BER decoder logic is used by pyasn1.codec.ber.decoder.decode() grows the RELATIVE-OID/OBJECT IDENTIFIER value via the reloid += ((subId << 7) + nextSubId,) accumulation without enforcing a reasonable limit on the number of continuation octets or the resulting object size, which can trigger memory exhaustion during parsing.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2026-23490",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/84605/97c"
+        },
+        {
+            "vulnerability_id": "83955",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "<3.13.3"
+            ],
+            "all_vulnerable_specs": [
+                "<3.13.3"
+            ],
+            "analyzed_version": "3.12.15",
+            "analyzed_requirement": {
+                "raw": "aiohttp==3.12.15",
+                "extras": [],
+                "marker": null,
+                "name": "aiohttp",
+                "specifier": "==3.12.15",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+            },
+            "advisory": "Affected versions of the aiohttp package are vulnerable to Denial of Service (DoS) due to unbounded decompression of highly compressed HTTP request bodies when the HTTP parser auto_decompress feature is enabled.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-69223",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/83955/97c"
+        },
+        {
+            "vulnerability_id": "83956",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "<3.13.3"
+            ],
+            "all_vulnerable_specs": [
+                "<3.13.3"
+            ],
+            "analyzed_version": "3.12.15",
+            "analyzed_requirement": {
+                "raw": "aiohttp==3.12.15",
+                "extras": [],
+                "marker": null,
+                "name": "aiohttp",
+                "specifier": "==3.12.15",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+            },
+            "advisory": "Affected versions of the aiohttp package are vulnerable to Request Smuggling due to inconsistent Unicode processing of non-ASCII HTTP header values. In the pure-Python HTTP parser (used when the C extensions are not installed or when AIOHTTP_NO_EXTENSIONS is enabled), aiohttp.http_parser.parse_headers() and helpers such as _is_supported_upgrade() and HttpParser._is_chunked_te() apply .lower() to Upgrade, Transfer-Encoding, and Content-Encoding values without first enforcing ASCII-only input, allowing certain non-ASCII characters to be transformed during case-folding and creating parsing discrepancies.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-69224",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/83956/97c"
+        },
+        {
+            "vulnerability_id": "83957",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "<3.13.3"
+            ],
+            "all_vulnerable_specs": [
+                "<3.13.3"
+            ],
+            "analyzed_version": "3.12.15",
+            "analyzed_requirement": {
+                "raw": "aiohttp==3.12.15",
+                "extras": [],
+                "marker": null,
+                "name": "aiohttp",
+                "specifier": "==3.12.15",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+            },
+            "advisory": "Affected versions of the aiohttp package are vulnerable to Request Smuggling due to Unicode digit matching in the Range header parser. In aiohttp.web_request.BaseRequest.http_range, the Range header is parsed with the regular expression ^bytes=(\\d*)-(\\d*)$ via re.findall(...) without restricting \\d to ASCII, which allows non-ASCII decimal characters to be accepted as valid byte-range values.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-69225",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/83957/97c"
+        },
+        {
+            "vulnerability_id": "83958",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "<3.13.3"
+            ],
+            "all_vulnerable_specs": [
+                "<3.13.3"
+            ],
+            "analyzed_version": "3.12.15",
+            "analyzed_requirement": {
+                "raw": "aiohttp==3.12.15",
+                "extras": [],
+                "marker": null,
+                "name": "aiohttp",
+                "specifier": "==3.12.15",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+            },
+            "advisory": "Affected versions of the aiohttp package are vulnerable to Information Disclosure due to static-file path normalisation enabling inference of absolute path component existence. In aiohttp, applications that register a static route via aiohttp.web.static() may expose filesystem path information because the static handler\u2019s normalization and response behaviour lets a requester distinguish which absolute path components exist.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-69226",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/83958/97c"
+        },
+        {
+            "vulnerability_id": "83959",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "<3.13.3"
+            ],
+            "all_vulnerable_specs": [
+                "<3.13.3"
+            ],
+            "analyzed_version": "3.12.15",
+            "analyzed_requirement": {
+                "raw": "aiohttp==3.12.15",
+                "extras": [],
+                "marker": null,
+                "name": "aiohttp",
+                "specifier": "==3.12.15",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+            },
+            "advisory": "Affected versions of the aiohttp package are vulnerable to Denial of Service (DoS) due to relying on Python assert statements for malformed request handling, which are removed when interpreter optimizations are enabled. The aiohttp.web_request.Request.post() method can trigger an infinite loop in multipart POST body processing because assertions in multipart parsing paths, such as aiohttp.multipart.BodyPartReader.read_chunk() and _read_chunk_from_stream() are bypassed, preventing the code from enforcing an exit condition on invalid EOF and boundary states.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-69227",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/83959/97c"
+        },
+        {
+            "vulnerability_id": "83967",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "<3.13.3"
+            ],
+            "all_vulnerable_specs": [
+                "<3.13.3"
+            ],
+            "analyzed_version": "3.12.15",
+            "analyzed_requirement": {
+                "raw": "aiohttp==3.12.15",
+                "extras": [],
+                "marker": null,
+                "name": "aiohttp",
+                "specifier": "==3.12.15",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+            },
+            "advisory": "Affected versions of the aiohttp package are vulnerable to Denial of Service (DoS) due to improper enforcement of request size limits during multipart form parsing. The aiohttp aiohttp.web_request.Request.post() method in aiohttp/web_request.py iterates over multipart fields but (prior to the fix) resets its running byte counter per part rather than tracking the total size of the entire multipart form, allowing the aggregate payload to grow without being bounded by client_max_size.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-69228",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/83967/97c"
+        },
+        {
+            "vulnerability_id": "83968",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "<3.13.3"
+            ],
+            "all_vulnerable_specs": [
+                "<3.13.3"
+            ],
+            "analyzed_version": "3.12.15",
+            "analyzed_requirement": {
+                "raw": "aiohttp==3.12.15",
+                "extras": [],
+                "marker": null,
+                "name": "aiohttp",
+                "specifier": "==3.12.15",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+            },
+            "advisory": "Affected versions of the aiohttp package are vulnerable to Denial of Service (DoS) due to excessive blocking CPU usage when processing a large number of HTTP chunked messages. When an aiohttp server endpoint calls request.read(), the chunked body handling performs costly per-chunk processing that can consume a moderate amount of blocking CPU time (for example, around one second) when the request contains an unusually large number of chunks.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-69229",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/83968/97c"
+        },
+        {
+            "vulnerability_id": "83969",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": [
+                "<3.13.3"
+            ],
+            "all_vulnerable_specs": [
+                "<3.13.3"
+            ],
+            "analyzed_version": "3.12.15",
+            "analyzed_requirement": {
+                "raw": "aiohttp==3.12.15",
+                "extras": [],
+                "marker": null,
+                "name": "aiohttp",
+                "specifier": "==3.12.15",
+                "url": null,
+                "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+            },
+            "advisory": "Affected versions of the aiohttp package are vulnerable to Denial of Service (DoS) due to excessive warning-level logging when parsing invalid Cookie headers. When server code accesses aiohttp.web_request.Request.cookies, the aiohttp._cookie_helpers.parse_cookie_header() function validates cookie names and can emit a log entry for each illegal cookie name, enabling a single request to generate a large number of warning logs.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2025-69230",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://data.safetycli.com/v/83969/97c"
+        }
+    ],
+    "ignored_vulnerabilities": [],
+    "remediations": {
+        "urllib3": {
+            "requirements": {
+                "==2.5.0": {
+                    "vulnerabilities_found": 3,
+                    "version": "2.5.0",
+                    "requirement": {
+                        "raw": "urllib3==2.5.0",
+                        "extras": [],
+                        "marker": null,
+                        "name": "urllib3",
+                        "specifier": "==2.5.0",
+                        "url": null,
+                        "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\urllib3-2.5.0.dist-info"
+                    },
+                    "more_info_url": "https://data.safetycli.com/p/pypi/urllib3/97c/"
+                }
+            },
+            "current_version": null,
+            "vulnerabilities_found": null,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": null
+        },
+        "pyasn1": {
+            "requirements": {
+                "==0.6.1": {
+                    "vulnerabilities_found": 1,
+                    "version": "0.6.1",
+                    "requirement": {
+                        "raw": "pyasn1==0.6.1",
+                        "extras": [],
+                        "marker": null,
+                        "name": "pyasn1",
+                        "specifier": "==0.6.1",
+                        "url": null,
+                        "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyasn1-0.6.1.dist-info"
+                    },
+                    "more_info_url": "https://data.safetycli.com/p/pypi/pyasn1/97c/"
+                }
+            },
+            "current_version": null,
+            "vulnerabilities_found": null,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": null
+        },
+        "aiohttp": {
+            "requirements": {
+                "==3.12.15": {
+                    "vulnerabilities_found": 8,
+                    "version": "3.12.15",
+                    "requirement": {
+                        "raw": "aiohttp==3.12.15",
+                        "extras": [],
+                        "marker": null,
+                        "name": "aiohttp",
+                        "specifier": "==3.12.15",
+                        "url": null,
+                        "found": "C:\\Users\\Lakshay\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\aiohttp-3.12.15.dist-info"
+                    },
+                    "more_info_url": "https://data.safetycli.com/p/pypi/aiohttp/97c/"
+                }
+            },
+            "current_version": null,
+            "vulnerabilities_found": null,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": null
+        }
+    },
+    "remediations_results": {
+        "vulnerabilities_fixed": [],
+        "remediations_applied": {},
+        "remediations_skipped": {}
+    }
+}

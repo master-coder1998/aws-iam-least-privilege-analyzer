@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass
+from typing import Any
 from enum import Enum
 
 logger = logging.getLogger(__name__)
@@ -614,9 +615,9 @@ class EscalationDetector:
             f"See all mitigations: {path.id} in escalation_paths.py"
         )
 
-    def summary(self, detections: list[DetectedEscalation]) -> dict:
+    def summary(self, detections: list[DetectedEscalation]) -> dict[str, Any]:
         """Returns a structured summary for reporting."""
-        by_severity: dict[str, list] = {
+        by_severity: dict[str, list[dict[str, Any]]] = {
             "CRITICAL": [],
             "HIGH": [],
             "MEDIUM": [],

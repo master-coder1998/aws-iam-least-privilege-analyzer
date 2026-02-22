@@ -285,7 +285,7 @@ class SecurityHubIntegration:
         }
         return order.get(severity, 0)
 
-    def _batch_import(self, findings: list[dict]) -> dict[str, int]:
+    def _batch_import(self, findings: list[dict[str, Any]]) -> dict[str, int]:
         """Imports findings in batches of 100 (Security Hub API limit)."""
         total_imported = 0
         total_failed = 0

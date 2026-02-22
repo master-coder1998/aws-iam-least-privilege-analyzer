@@ -12,7 +12,7 @@ import json
 import logging
 import os
 from datetime import datetime, timezone
-from typing import Any
+from typing import Any, Dict
 
 import boto3
 
@@ -44,7 +44,7 @@ table = dynamodb.Table(DYNAMODB_TABLE)
 s3 = boto3.client("s3", region_name=REGION)
 
 
-def handler(event: dict, context: Any) -> dict:
+def handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
     """
     Lambda entry point.
 
@@ -78,7 +78,7 @@ def handler(event: dict, context: Any) -> dict:
 
     min_severity = Severity[MIN_SEVERITY_FOR_SECHUB]
 
-    run_summary = {
+    run_summary: dict[str, Any] = {
         "run_id": _run_id(),
         "started_at": datetime.now(tz=timezone.utc).isoformat(),
         "accounts_analyzed": 0,
@@ -180,7 +180,7 @@ def handler(event: dict, context: Any) -> dict:
     }
 
 
-def _extract_effective_actions(role) -> list[str]:
+def _extract_effective_actions(role: Any) -> list[str]:
     """
     Extracts a flat list of IAM actions from all attached and inline policies.
 
@@ -206,7 +206,7 @@ def _extract_effective_actions(role) -> list[str]:
     return list(set(actions))
 
 
-def _extract_actions_from_document(policy_doc: dict) -> list[str]:
+def _extract_actions_from_document(policy_doc: dict[str, Any]) -> list[str]:
     actions = []
     for stmt in policy_doc.get("Statement", []):
         if stmt.get("Effect") != "Allow":
@@ -218,7 +218,7 @@ def _extract_actions_from_document(policy_doc: dict) -> list[str]:
     return actions
 
 
-def _persist_findings(role_arn, account_id, risk, remediation) -> None:
+def _persist_findings(role_arn: str, account_id: str, risk: Any, remediation: Any) -> None:
     """Stores findings to DynamoDB and remediation policy to S3."""
     now = datetime.now(tz=timezone.utc).isoformat()
 
@@ -254,7 +254,7 @@ def _persist_findings(role_arn, account_id, risk, remediation) -> None:
     )
 
 
-def _store_run_summary(summary: dict) -> None:
+def _store_run_summary(summary: dict[str, Any]) -> None:
     """Stores run summary to DynamoDB for operational visibility."""
     try:
         table.put_item(Item={

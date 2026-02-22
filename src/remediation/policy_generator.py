@@ -43,10 +43,10 @@ class PolicyStatement:
     effect: str
     actions: list[str]
     resources: list[str]
-    conditions: dict = field(default_factory=dict)
+    conditions: dict[str, Any] = field(default_factory=dict)
     comment: str = ""  # Stored as Sid for traceability
 
-    def to_dict(self) -> dict:
+    def to_dict(self) -> dict[str, Any]:
         stmt: dict[str, Any] = {
             "Effect": self.effect,
             "Action": sorted(self.actions),
@@ -68,9 +68,9 @@ class RemediationPolicy:
     account_id: str
     lookback_days: int
     generated_at: datetime
-    policy_document: dict
+    policy_document: dict[str, Any]
     coverage_warnings: list[str]
-    usage_summary: dict
+    usage_summary: dict[str, Any]
     caveats: list[str]
 
     def to_json(self, indent: int = 2) -> str:
@@ -274,7 +274,7 @@ class RemediationGenerator:
             return None
 
         # Group by service
-        by_service: dict[str, list[dict]] = {}
+        by_service: dict[str, list[dict[str, Any]]] = {}
         for p in parsed:
             by_service.setdefault(p["service"], []).append(p)
 

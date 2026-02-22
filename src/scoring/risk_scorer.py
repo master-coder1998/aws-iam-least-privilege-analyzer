@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 from enum import Enum
 
 from .escalation_paths import DetectedEscalation, EscalationDetector
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -60,7 +61,7 @@ class RiskScore:
     escalation_paths: list[DetectedEscalation]
     scored_at: datetime = field(default_factory=lambda: datetime.now(tz=timezone.utc))
 
-    def to_dict(self) -> dict:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "principal_arn": self.principal_arn,
             "account_id": self.account_id,
@@ -124,7 +125,7 @@ class RiskScorer:
         principal_arn: str,
         account_id: str,
         effective_actions: list[str],
-        trust_policy: dict,
+        trust_policy: dict[str, Any],
         last_used: datetime | None,
         tags: dict[str, str] | None = None,
     ) -> RiskScore:
@@ -300,7 +301,7 @@ class RiskScorer:
             findings=findings,
         )
 
-    def _score_trust_policy(self, trust_policy: dict) -> ScoreDimension:
+    def _score_trust_policy(self, trust_policy: dict[str, Any]) -> ScoreDimension:
         findings = []
         score = 0
 
@@ -378,7 +379,7 @@ class RiskScorer:
         )
 
     def _score_admin_without_mfa(
-        self, effective_actions: list[str], trust_policy: dict
+        self, effective_actions: list[str], trust_policy: dict[str, Any]
     ) -> ScoreDimension:
         findings = []
         score = 0
@@ -413,7 +414,7 @@ class RiskScorer:
             findings=findings,
         )
 
-    def _trust_requires_mfa(self, trust_policy: dict) -> bool:
+    def _trust_requires_mfa(self, trust_policy: dict[str, Any]) -> bool:
         for stmt in trust_policy.get("Statement", []):
             conditions = stmt.get("Condition", {})
             bool_conditions = conditions.get("Bool", {})

@@ -8,7 +8,7 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
-from typing import Iterator
+from typing import Iterator, Any, Dict, List, cast
 
 import boto3
 from botocore.exceptions import ClientError
@@ -27,11 +27,11 @@ class IAMRoleProfile:
     role_name: str
     create_date: datetime
     last_used: datetime | None
-    assume_role_policy: dict
-    attached_policies: list[dict] = field(default_factory=list)
-    inline_policies: list[dict] = field(default_factory=list)
-    permission_boundaries: dict | None = None
-    tags: dict = field(default_factory=dict)
+    assume_role_policy: dict[str, Any]
+    attached_policies: list[dict[str, Any]] = field(default_factory=list)
+    inline_policies: list[dict[str, Any]] = field(default_factory=list)
+    permission_boundaries: dict[str, Any] | None = None
+    tags: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -123,7 +123,7 @@ class CrossAccountSession:
         )
         return self
 
-    def __exit__(self, *_) -> None:
+    def __exit__(self, *_: object) -> None:
         self._session = None
 
     def client(self, service: str) -> boto3.client:
@@ -199,7 +199,7 @@ class IAMCrawler:
         self,
         iam: boto3.client,
         account_id: str,
-        role_summary: dict,
+        role_summary: dict[str, Any],
     ) -> IAMRoleProfile:
         role_name = role_summary["RoleName"]
         role_arn = role_summary["Arn"]
@@ -268,14 +268,14 @@ class IAMCrawler:
             tags=tags,
         )
 
-    def _get_policy_document(self, iam: boto3.client, policy_arn: str) -> dict:
+    def _get_policy_document(self, iam: boto3.client, policy_arn: str) -> dict[str, Any]:
         """Fetches the current default version of a managed policy."""
         policy = iam.get_policy(PolicyArn=policy_arn)["Policy"]
         version = iam.get_policy_version(
             PolicyArn=policy_arn,
             VersionId=policy["DefaultVersionId"],
         )
-        return version["PolicyVersion"]["Document"]
+        return cast(dict[str, Any], version["PolicyVersion"]["Document"])
 
     def get_cloudtrail_usage(self, role_arn: str) -> list[UsageRecord]:
         """
@@ -335,7 +335,7 @@ class IAMCrawler:
             )
             return []
 
-    def _wait_for_query(self, query_id: str, timeout_seconds: int = 120) -> list[dict]:
+    def _wait_for_query(self, query_id: str, timeout_seconds: int = 120) -> list[dict[str, Any]]:
         """Polls CloudTrail Lake query until complete or timeout."""
         import time
 
@@ -346,7 +346,7 @@ class IAMCrawler:
             status = resp.get("QueryStatus")
 
             if status == "FINISHED":
-                return resp.get("QueryResultRows", [])
+                return cast(list[dict[str, Any]], resp.get("QueryResultRows", []))
             elif status in ("FAILED", "CANCELLED", "TIMED_OUT"):
                 raise RuntimeError(
                     f"CloudTrail Lake query {query_id} ended with status {status}"
@@ -358,7 +358,7 @@ class IAMCrawler:
             f"CloudTrail Lake query {query_id} did not complete in {timeout_seconds}s"
         )
 
-    def _parse_usage_results(self, rows: list[dict]) -> list[UsageRecord]:
+    def _parse_usage_results(self, rows: list[dict[str, Any]]) -> list[UsageRecord]:
         records = []
         for row in rows:
             columns = row.get("QueryResultColumns", [])
