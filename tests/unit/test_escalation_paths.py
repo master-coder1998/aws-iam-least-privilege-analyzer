@@ -11,16 +11,16 @@ A hiring manager reading this file should be able to confirm:
 3. The logic can be reasoned about and defended in an interview
 """
 
+from datetime import UTC, datetime
+
 import pytest
-from datetime import datetime, timezone
 
 from src.scoring.escalation_paths import (
-    EscalationDetector,
     ESCALATION_PATHS,
+    EscalationDetector,
     _action_matches,
 )
 from src.scoring.risk_scorer import RiskScorer, Severity, score_to_severity
-
 
 # ─────────────────────────────────────────────────────────────────────
 # action_matches helper tests
@@ -252,7 +252,7 @@ class TestRiskScorer:
 
     def test_readonly_role_scores_low(self, scorer, simple_trust_policy):
         actions = ["s3:GetObject", "s3:ListBucket", "ec2:DescribeInstances"]
-        last_used = datetime.now(tz=timezone.utc)
+        last_used = datetime.now(tz=UTC)
 
         result = scorer.score(
             principal_arn="arn:aws:iam::123456789012:role/readonly",
@@ -267,7 +267,7 @@ class TestRiskScorer:
 
     def test_admin_without_mfa_scores_critical(self, scorer, cross_account_trust_no_conditions):
         actions = ["*"]
-        last_used = datetime.now(tz=timezone.utc)
+        last_used = datetime.now(tz=UTC)
 
         result = scorer.score(
             principal_arn="arn:aws:iam::123456789012:role/admin",
@@ -284,7 +284,7 @@ class TestRiskScorer:
     def test_admin_with_mfa_scores_lower(self, scorer, admin_trust_with_mfa):
         """Admin role WITH MFA should score lower than one without"""
         actions = ["*"]
-        last_used = datetime.now(tz=timezone.utc)
+        last_used = datetime.now(tz=UTC)
 
         result_with_mfa = scorer.score(
             principal_arn="arn:aws:iam::123456789012:role/admin-mfa",
@@ -321,7 +321,7 @@ class TestRiskScorer:
             account_id="123456789012",
             effective_actions=actions,
             trust_policy=simple_trust_policy,
-            last_used=datetime.now(tz=timezone.utc),
+            last_used=datetime.now(tz=UTC),
         )
 
         stale_result = scorer.score(
@@ -350,7 +350,7 @@ class TestRiskScorer:
 
     def test_sensitive_service_wildcards_score_higher(self, scorer, simple_trust_policy):
         """IAM wildcard should score higher than EC2 wildcard"""
-        last_used = datetime.now(tz=timezone.utc)
+        last_used = datetime.now(tz=UTC)
 
         iam_wildcard = scorer.score(
             principal_arn="arn:aws:iam::123456789012:role/iam-admin",
@@ -389,7 +389,7 @@ class TestRiskScorer:
             effective_actions=["s3:GetObject", "iam:PassRole", "lambda:CreateFunction",
                                "lambda:InvokeFunction"],
             trust_policy=simple_trust_policy,
-            last_used=datetime.now(tz=timezone.utc),
+            last_used=datetime.now(tz=UTC),
         )
         # Should not raise
         serialized = json.dumps(result.to_dict())

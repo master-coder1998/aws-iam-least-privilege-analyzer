@@ -11,15 +11,15 @@ from __future__ import annotations
 import json
 import logging
 import os
-from datetime import datetime, timezone
-from typing import Any, Dict
+from datetime import UTC, datetime
+from typing import Any
 
 import boto3
 
 from src.analyzer.crawler import IAMCrawler
-from src.scoring.risk_scorer import RiskScorer, Severity
-from src.remediation.policy_generator import RemediationGenerator
 from src.integrations.security_hub import SecurityHubIntegration
+from src.remediation.policy_generator import RemediationGenerator
+from src.scoring.risk_scorer import RiskScorer, Severity
 
 # ── Configuration from environment (set by Terraform) ──────────────
 ORG_ACCOUNT_ID = os.environ["ORG_ACCOUNT_ID"]
@@ -44,7 +44,7 @@ table = dynamodb.Table(DYNAMODB_TABLE)
 s3 = boto3.client("s3", region_name=REGION)
 
 
-def handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
+def handler(event: dict[str, Any], _context: Any) -> dict[str, Any]:
     """
     Lambda entry point.
 
@@ -80,7 +80,7 @@ def handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
 
     run_summary: dict[str, Any] = {
         "run_id": _run_id(),
-        "started_at": datetime.now(tz=timezone.utc).isoformat(),
+        "started_at": datetime.now(tz=UTC).isoformat(),
         "accounts_analyzed": 0,
         "roles_analyzed": 0,
         "critical_findings": 0,
@@ -167,7 +167,7 @@ def handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
         run_summary["sechub_published"] = result["imported"]
         run_summary["sechub_failed"] = result["failed"]
 
-    run_summary["completed_at"] = datetime.now(tz=timezone.utc).isoformat()
+    run_summary["completed_at"] = datetime.now(tz=UTC).isoformat()
 
     logger.info("Run complete: %s", json.dumps(run_summary, indent=2))
 
@@ -220,7 +220,7 @@ def _extract_actions_from_document(policy_doc: dict[str, Any]) -> list[str]:
 
 def _persist_findings(role_arn: str, account_id: str, risk: Any, remediation: Any) -> None:
     """Stores findings to DynamoDB and remediation policy to S3."""
-    now = datetime.now(tz=timezone.utc).isoformat()
+    now = datetime.now(tz=UTC).isoformat()
 
     # DynamoDB: upsert finding with history tracking
     table.put_item(Item={
@@ -233,7 +233,7 @@ def _persist_findings(role_arn: str, account_id: str, risk: Any, remediation: An
         "escalation_paths": [e.path.id for e in risk.escalation_paths],
         "dimensions": {d.name: d.score for d in risk.dimensions},
         "scored_at": now,
-        "ttl": int(datetime.now(tz=timezone.utc).timestamp()) + (90 * 86400),  # 90-day TTL
+        "ttl": int(datetime.now(tz=UTC).timestamp()) + (90 * 86400),  # 90-day TTL
     })
 
     # S3: remediation artifact
@@ -262,7 +262,7 @@ def _store_run_summary(summary: dict[str, Any]) -> None:
             "sk": "SUMMARY",
             **{k: str(v) if isinstance(v, (int, float)) else v
                for k, v in summary.items()},
-            "ttl": int(datetime.now(tz=timezone.utc).timestamp()) + (365 * 86400),
+            "ttl": int(datetime.now(tz=UTC).timestamp()) + (365 * 86400),
         })
     except Exception as e:
         logger.error("Failed to store run summary: %s", e)
@@ -270,4 +270,4 @@ def _store_run_summary(summary: dict[str, Any]) -> None:
 
 def _run_id() -> str:
     """Deterministic daily run ID for idempotency."""
-    return f"run-{datetime.now(tz=timezone.utc).strftime('%Y%m%d')}"
+    return f"run-{datetime.now(tz=UTC).strftime('%Y%m%d')}"

@@ -14,13 +14,13 @@ system because Security Hub:
 from __future__ import annotations
 
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 import boto3
 from botocore.exceptions import ClientError
 
-from ..scoring.risk_scorer import RiskScore, Severity
+from src.scoring.risk_scorer import RiskScore, Severity
 
 logger = logging.getLogger(__name__)
 
@@ -130,7 +130,7 @@ class SecurityHubIntegration:
         Using the correct schema ensures compatibility with Security Hub
         automation rules, suppression, and third-party integrations.
         """
-        now = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
+        now = datetime.now(tz=UTC).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
 
         # Collect top findings across all dimensions
         all_findings = []

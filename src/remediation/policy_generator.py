@@ -14,10 +14,10 @@ import json
 import logging
 import re
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
-from ..analyzer.crawler import UsageRecord
+from src.analyzer.crawler import UsageRecord
 
 logger = logging.getLogger(__name__)
 
@@ -161,7 +161,7 @@ class RemediationGenerator:
             role_arn=role_arn,
             account_id=account_id,
             lookback_days=lookback_days,
-            generated_at=datetime.now(tz=timezone.utc),
+            generated_at=datetime.now(tz=UTC),
             policy_document=policy_document,
             coverage_warnings=coverage_warnings,
             usage_summary=usage_summary,
@@ -346,7 +346,7 @@ class RemediationGenerator:
             role_arn=role_arn,
             account_id=account_id,
             lookback_days=lookback_days,
-            generated_at=datetime.now(tz=timezone.utc),
+            generated_at=datetime.now(tz=UTC),
             policy_document={"Version": "2012-10-17", "Statement": []},
             coverage_warnings=["No CloudTrail usage found. Role may be stale or "
                                "CloudTrail may not cover its API calls."],

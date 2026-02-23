@@ -20,13 +20,13 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass
+from enum import StrEnum
 from typing import Any
-from enum import Enum
 
 logger = logging.getLogger(__name__)
 
 
-class EscalationSeverity(str, Enum):
+class EscalationSeverity(StrEnum):
     CRITICAL = "CRITICAL"   # Direct path to AdministratorAccess
     HIGH = "HIGH"           # Path to elevated permissions (not full admin)
     MEDIUM = "MEDIUM"       # Lateral movement or partial privilege gain

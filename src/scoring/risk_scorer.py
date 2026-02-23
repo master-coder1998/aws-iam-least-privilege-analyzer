@@ -11,11 +11,11 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
-from enum import Enum
+from datetime import UTC, datetime
+from enum import StrEnum
+from typing import Any
 
 from .escalation_paths import DetectedEscalation, EscalationDetector
-from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -23,10 +23,10 @@ STALE_ROLE_DAYS = 90
 MAX_SCORE = 100
 
 
-class Severity(str, Enum):
+class Severity(StrEnum):
     CRITICAL = "CRITICAL"   # score >= 70
-    HIGH = "HIGH"           # score 45–69
-    MEDIUM = "MEDIUM"       # score 20–44
+    HIGH = "HIGH"           # score 45-69
+    MEDIUM = "MEDIUM"       # score 20-44
     LOW = "LOW"             # score < 20
     INFORMATIONAL = "INFORMATIONAL"  # special cases (e.g., service roles)
 
@@ -34,12 +34,11 @@ class Severity(str, Enum):
 def score_to_severity(score: int) -> Severity:
     if score >= 70:
         return Severity.CRITICAL
-    elif score >= 45:
+    if score >= 45:
         return Severity.HIGH
-    elif score >= 20:
+    if score >= 20:
         return Severity.MEDIUM
-    else:
-        return Severity.LOW
+    return Severity.LOW
 
 
 @dataclass
@@ -59,7 +58,7 @@ class RiskScore:
     severity: Severity
     dimensions: list[ScoreDimension]
     escalation_paths: list[DetectedEscalation]
-    scored_at: datetime = field(default_factory=lambda: datetime.now(tz=timezone.utc))
+    scored_at: datetime = field(default_factory=lambda: datetime.now(tz=UTC))
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -85,28 +84,28 @@ class RiskScore:
 
 class RiskScorer:
     """
-    Computes a composite risk score (0–100) for an IAM role across six dimensions:
+    Computes a composite risk score (0-100) for an IAM role across six dimensions:
 
-    1. Wildcard Actions (0–30 pts)
+    1. Wildcard Actions (0-30 pts)
        Detects service-level (*) and action-level wildcards.
        Weighted higher for sensitive services (IAM, STS, Organizations).
 
-    2. Wildcard Resources (0–20 pts)
+    2. Wildcard Resources (0-20 pts)
        Wildcard resources compound the risk of wildcard actions.
        Scoped wildcards (e.g., arn:aws:s3:::my-bucket/*) are penalized less.
 
-    3. Privilege Escalation Paths (0–40 pts)
+    3. Privilege Escalation Paths (0-40 pts)
        Graph-based detection of 23 known escalation techniques.
        Single highest-severity path dominates this dimension.
 
-    4. Cross-Account Trust Issues (0–30 pts)
+    4. Cross-Account Trust Issues (0-30 pts)
        Overly permissive trust policies, missing ExternalId conditions,
        wildcard principal in trust policy.
 
-    5. Admin Role Without MFA (0–25 pts)
+    5. Admin Role Without MFA (0-25 pts)
        Admin-equivalent permissions without MFA condition key.
 
-    6. Staleness (0–15 pts)
+    6. Staleness (0-15 pts)
        Role unused for 90+ days represents unnecessary attack surface.
     """
 
@@ -426,7 +425,7 @@ class RiskScorer:
         findings = []
         score = 0
 
-        now = datetime.now(tz=timezone.utc)
+        now = datetime.now(tz=UTC)
 
         if last_used is None:
             score = 15
@@ -437,7 +436,7 @@ class RiskScorer:
         else:
             # Normalize timezone if needed
             if last_used.tzinfo is None:
-                last_used = last_used.replace(tzinfo=timezone.utc)
+                last_used = last_used.replace(tzinfo=UTC)
 
             days_since = (now - last_used).days
 

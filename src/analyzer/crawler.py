@@ -6,9 +6,10 @@ CloudTrail Lake usage queries across all AWS Organizations accounts.
 from __future__ import annotations
 
 import logging
+from collections.abc import Iterator
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
-from typing import Iterator, Any, Dict, List, cast
+from datetime import UTC, datetime, timedelta
+from typing import Any, cast
 
 import boto3
 from botocore.exceptions import ClientError
@@ -87,7 +88,7 @@ class CrossAccountSession:
         self._external_id = external_id
         self._session: boto3.Session | None = None
 
-    def __enter__(self) -> "CrossAccountSession":
+    def __enter__(self) -> CrossAccountSession:
         sts = boto3.client("sts")
         role_arn = (
             f"arn:aws:iam::{self.account_id}:role/{MEMBER_ROLE_NAME}"
@@ -293,7 +294,7 @@ class IAMCrawler:
         in the remediation output.
         """
         start = (
-            datetime.now(tz=timezone.utc) - timedelta(days=CLOUDTRAIL_LOOKBACK_DAYS)
+            datetime.now(tz=UTC) - timedelta(days=CLOUDTRAIL_LOOKBACK_DAYS)
         ).strftime("%Y-%m-%d %H:%M:%S")
 
         # CloudTrail Lake uses Athena-like SQL
@@ -339,15 +340,15 @@ class IAMCrawler:
         """Polls CloudTrail Lake query until complete or timeout."""
         import time
 
-        deadline = datetime.now(tz=timezone.utc) + timedelta(seconds=timeout_seconds)
+        deadline = datetime.now(tz=UTC) + timedelta(seconds=timeout_seconds)
 
-        while datetime.now(tz=timezone.utc) < deadline:
+        while datetime.now(tz=UTC) < deadline:
             resp = self._ct_client.get_query_results(QueryId=query_id)
             status = resp.get("QueryStatus")
 
             if status == "FINISHED":
                 return cast(list[dict[str, Any]], resp.get("QueryResultRows", []))
-            elif status in ("FAILED", "CANCELLED", "TIMED_OUT"):
+            if status in ("FAILED", "CANCELLED", "TIMED_OUT"):
                 raise RuntimeError(
                     f"CloudTrail Lake query {query_id} ended with status {status}"
                 )
@@ -374,7 +375,7 @@ class IAMCrawler:
                 resources=[resource] if resource != "unknown" else [],
                 count=int(values.get("call_count", 0)),
                 last_seen=datetime.fromisoformat(
-                    values.get("last_seen", datetime.now(tz=timezone.utc).isoformat())
+                    values.get("last_seen", datetime.now(tz=UTC).isoformat())
                 ),
             ))
 
